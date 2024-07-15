@@ -1,0 +1,95 @@
+.articlePage {
+    margin: 40px auto;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background: var(--color--1);
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .summary {
+    margin-top: 25px;
+    margin-bottom: 45px;
+  }
+  
+  .titulo {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .bibliography {
+    font-size: large;
+    line-height: 1.4;
+    text-align: justify;
+  }
+  
+  .videoSection iframe {
+    width: 100%;
+    height: 315px;
+  }
+  
+  .linkSection a {
+    font-size: 1.2em;
+    color: var(--color-link);
+    text-decoration: none;
+  }
+  
+  .linkSection a:hover {
+    text-decoration: underline;
+  }
+  
+  .imageSection img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .buttons {
+    background: var(--color-rgb);
+    border: none;
+    width: 100px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 20px;
+    color: var(--color--1);
+    cursor: pointer;
+  }
+  
+  .buttons:hover {
+    background: var(--color-link);
+  }
+  
+  .buttonRemove {
+    background: red;
+    border: none;
+    width: 100px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 20px;
+    color: var(--color--1);
+    cursor: pointer;
+  }
+  
+  .buttonRemove:hover {
+    background: rgb(241, 126, 126);
+  }
+
+.pdfView {
+    display: flex;
+    gap: 50px;
+}
+
+.pdfView svg{
+    color: var(--color-link);
+}
+
+  
