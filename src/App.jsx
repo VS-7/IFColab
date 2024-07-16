@@ -34,6 +34,8 @@ import ArticleEditPage from './pages/ArticleCreator/ArticleEditPage';
 import ArticleListPage from './pages/ArticleCreator/ArticleListPage';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import PetianosArea from './pages/PetianosArea/PetianoArea';
+import ProjectCreator from './pages/ProjectCreate/ProjectCreator';
+import ProjectPage from './pages/ProjectCreate/ProjectPage';
 
 function App() {
 
@@ -96,6 +98,12 @@ function App() {
              <Route 
                 path='/editar-publicacao/:publicationId' 
                 element={<EditPublicationPage />} /> 
+            <Route 
+                path='/criar-projeto' 
+                element={user ? <ProjectCreator /> : <Navigate to="/" />} />
+            <Route 
+                path='/projeto/:projectId' 
+                element={user ? <ProjectPage /> : <Navigate to="/" />} />
               {/*Cursos*/}
               <Route 
                 path='/cursos/:courseId/topico/:topicId' 

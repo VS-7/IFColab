@@ -23,7 +23,8 @@
     height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
-    border: 8px solid var(--color--1);
+    border: 3px solid var(--color--6);
+    border-bottom: 8px solid var(--color--6);
   }
 
   .profile {
@@ -61,7 +62,7 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    background-color: var(--color--1);
+    background-color: var(--color--4);
     color: var(--color--6);
     border: none;
     border-radius: 5px;

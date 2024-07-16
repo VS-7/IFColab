@@ -4,7 +4,7 @@
   --color--2: #f0f0f0;
   --color--3: #e0e0e0;
   --color--4: #f7f7f7;
-  --color--5: #606060;
+  --color--5: #14101f;
   --color--6: #000000;
   --color--7: #000000;
   --color--8: #2e2e2e;
@@ -12,10 +12,12 @@
   --color-btn: #000000;
   --color-navbar: rgba(255, 255, 255, 0.959);
   --color-link: #ABF600;
+  --color-link-2: #f2fed1;
   --color-rgb: linear-gradient(90deg, #ABF600 0%,#ABF600 94%);
   background-color: var(--color--1);
   color: var(--color--6);
 }
+
 
 .main-container {
     overflow-x: hidden;

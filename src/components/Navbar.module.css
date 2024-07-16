@@ -27,6 +27,7 @@
     background-color: var(--color-navbar);
     display: flex;
     top: 0;
+    z-index: 999;
     position: fixed;
     justify-content: center;
     align-items: center;

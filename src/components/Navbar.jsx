@@ -98,8 +98,8 @@ const Navbar = () => {
                           <NavLink to="/criar-curso" className={styles.dropdownItem}>
                             Criar um Curso
                           </NavLink>
-                          <NavLink to="/criar-artigo" className={styles.dropdownItem}>
-                            Publicar Artigo
+                          <NavLink to="/criar-projeto" className={styles.dropdownItem}>
+                            Criar um Projeto
                           </NavLink>
                         </div>
                       )}

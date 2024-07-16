@@ -1,67 +1,186 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 .container {
-    font-family: 'Poppins', sans-serif;
-    padding: 20px;
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-  
-  .main {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
-  .posts {
-    flex: 3;
-  }
-  
-  .sidebar {
-    flex: 1;
-    margin-left: 40px;
-  }
+.main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 20px;
+}
 
-  .logo {
-    width: 50px;
-  }
-  
-  .about {
-    margin-bottom: 40px;
-  }
-  
-  .about h2 {
-    margin-bottom: 16px;
-  }
-  
-  .topics h2 {
-    margin-bottom: 16px;
-  }
-  
-  .topics ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .topics li {
-    margin-bottom: 8px;
-  }
+.posts {
+  flex: 3;
+}
 
-  .maisEdicoes {
-    display: flex;
-    align-items: center;
-  }
+.sidebar {
+  flex: 1;
+  margin-left: 40px;
+}
+
+.logo {
+  width: 50px;
+}
+
+.about {
+  margin-bottom: 40px;
+}
+
+.about h2 {
+  margin-bottom: 16px;
+}
+
+.topics h2 {
+  margin-bottom: 16px;
+}
+
+.topics ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.topics li {
+  margin-bottom: 8px;
+}
+
+.maisEdicoes {
+  display: flex;
+  align-items: center;
+}
 
 .maisEdicoes hr {
-    width: 75%;
-    margin-left: 5px;
+  width: 75%;
+  margin-left: 5px;
 }
+
+.recentPost {
+  margin-bottom: 40px;
+}
+
+.moreEditions {
+  margin-top: 40px;
+}
+
+.editionPost {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.date {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.loadMoreButton {
+    background: var(--color-link-2);
+    border: 1px solid var(--color--6);
+    padding: 10px;
+    border-radius: 20px;
+    transition: border-bottom 0.3s;
+    cursor: pointer;
+}
+
+.loadMoreButton:hover {
+    border-bottom: 6px solid var(--color--6);
+}
+
+.projectHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
   
+  .projectContainerWrapper {
+    width: 100%;
+    overflow-x: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+  
+  .projectContainer {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .scrollButton {
+    background-color: var(--color--6);
+    color: var(--color-link-2);
+    border: 1px solid var(--color--6);
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+  }
+  
+  .scrollButton:focus {
+    outline: none;
+  }
+
+  
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .sidebar {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .about,
+  .topics {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about img {
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+
+  .topics ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .topics li {
+    margin: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 5px;
+  }
+
+  .about p,
+  .topics li {
+    font-size: 0.9em;
+  }
+
+  .maisEdicoes h5 {
+    font-size: 1em;
+  }
+}

@@ -1,6 +1,7 @@
-.post {
+.project {
     margin-bottom: 40px;
-    width: 100%;
+    width: 300px;
+    height: 400px;
     border: 1px solid var(--color--6);
     border-radius: 40px;
     border-bottom: 8px solid var(--color--6);
@@ -50,6 +51,18 @@
   .user {
     width: 40px;
     border-radius: 50%;
+  }
+
+  .button{
+    background-color: var(--color-link-2);
+    border: 1px solid var(--color--6);
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
   }
 
   @media (max-width: 768px) {
