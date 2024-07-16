@@ -2,19 +2,18 @@ import React, { useEffect, useState, useRef } from 'react';
 import { db } from '../../firebase/config';
 import { collection, getDocs } from 'firebase/firestore';
 import Post from '../Post/Post';
-import CharacterCard from '../../components/CharacterCard/CharacterCard';
-import Project from '../../components/Project/Project'; // Importe o componente de detalhes do projeto
+import Project from '../../components/Project/Project';
 import styles from './Home.module.css';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
-  const [projects, setProjects] = useState([]); // Estado para armazenar os projetos
-  const [visiblePosts, setVisiblePosts] = useState(4); // Número inicial de posts visíveis
-  const [visibleProjects, setVisibleProjects] = useState(4); // Número inicial de projetos visíveis
+  const [projects, setProjects] = useState([]);
+  const [visiblePosts, setVisiblePosts] = useState(4);
+  const [visibleProjects, setVisibleProjects] = useState(4);
   const navigate = useNavigate();
-  const projectContainerRef = useRef(null); // Referência para o container de projetos
+  const projectContainerRef = useRef(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -53,12 +52,12 @@ const Home = () => {
   };
 
   const mostRecentPost = posts[0];
-  const olderPosts = posts.slice(1, visiblePosts); // Limitar posts visíveis
-  const visibleProjectsList = projects.slice(0, visibleProjects); // Limitar projetos visíveis
+  const olderPosts = posts.slice(1, visiblePosts);
+  const visibleProjectsList = projects.slice(0, visibleProjects);
 
   const scrollProjects = (direction) => {
     const container = projectContainerRef.current;
-    const scrollOffset = 300; // Quantidade de scroll em pixels
+    const scrollOffset = 300;
     if (direction === 'left') {
       container.scrollLeft -= scrollOffset;
     } else if (direction === 'right') {
@@ -94,7 +93,7 @@ const Home = () => {
                     </div>
                   ))}
                 </div>
-                {visiblePosts < posts.length && ( // Mostrar botão apenas se houver mais posts
+                {visiblePosts < posts.length && (
                   <button className={styles.loadMoreButton} onClick={loadMorePosts}>
                     Ver mais edições
                   </button>
@@ -129,13 +128,12 @@ const Home = () => {
         </aside>
       </main>
 
-      {/* Seção de Projetos */}
       <section className={styles.projects}>
-      <div className={styles.maisEdicoes}>
+        <div className={styles.maisEdicoes}>
           <h5>PROJETOS</h5> <hr />
         </div>
         <div className={styles.projectContainerWrapper}>
-          <button className={styles.scrollButton} onClick={() => scrollProjects('left')}>
+          <button className={styles.scrollButton} style={{ zIndex: 10 }} onClick={() => scrollProjects('left')}>
             <FaArrowLeft />
           </button>
           <div className={styles.projectContainer} ref={projectContainerRef}>
@@ -143,7 +141,7 @@ const Home = () => {
               <Project key={project.id} project={project} />
             ))}
           </div>
-          <button className={styles.scrollButton} onClick={() => scrollProjects('right')}>
+          <button className={styles.scrollButton} style={{ zIndex: 10 }} onClick={() => scrollProjects('right')}>
             <FaArrowRight />
           </button>
         </div>

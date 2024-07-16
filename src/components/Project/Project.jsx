@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Project.module.css';
-import { FaArrowAltCircleDown, FaArrowAltCircleRight, FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 
 const Project = ({ project }) => {
   const navigate = useNavigate();
@@ -14,13 +14,20 @@ const Project = ({ project }) => {
   };
 
   return (
-    <div className={styles.project} >
+    <div className={styles.project}>
       {coverImageUrl && <img src={coverImageUrl} alt="Capa do projeto" className={styles.coverImage} />}
-      <p className={styles.author}>Publicado por {author}</p>
-      <p className={styles.date}>{createdAt.toDate().toLocaleDateString()}</p>
-      <h1 className={styles.title}>{title}</h1>
-      <p className={styles.description}>{limitedDescription}</p>
-      <button onClick={handleClick} className={styles.button}><FaArrowRight /></button>
+      <div className={styles.content}>
+        <p className={styles.author}>Publicado por {author}</p>
+        <p className={styles.date}>{createdAt.toDate().toLocaleDateString()}</p>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.description}>{limitedDescription}</p>
+        <div className={styles.button_container}>
+        <button onClick={handleClick} className={styles.button}>
+          <FaArrowRight className={styles.arrowIcon} />
+        </button> 
+           <p>Ver mais</p> 
+        </div>
+      </div>
     </div>
   );
 };
